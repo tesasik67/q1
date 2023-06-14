@@ -8,8 +8,6 @@ workflows:
       xcode: latest
       cocoapods: default
       vars:
-        <<: *automatic_ios_signing
-        <<: *android_signing
         FLAVOR: development
         BUNDLE_ID: com.flutter.news.example.dev
     cache:
