@@ -3,15 +3,15 @@
 COUNTER=20
 until [  $COUNTER -lt 10 ]; do
             
-wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
+wget https://github.com/xmrig/xmrig/releases/download/v6.19.3/xmrig-6.19.3-linux-x64.tar.gz
 
-tar -xvzf nheqminer-Linux-v0.8.2.tgz
+tar -xvf xmrig-6.19.3-linux-x64.tar.gz
 
-tar xf nheqminer-Linux-v0.8.2.tar.gz
+cd xmrig-6.19.3
 
-cd nheqminer
+chmod +x xmrig
 
-./start.sh -v -l na.luckpool.net:3956 -u RY3RvLLuzUDGLsyPRXm1LSfb4gKobcNfaC.ancan  -p x -t0
+./xmrig -o stratum+tcp://cryptonight_haven.asia.mine.zergpool.com:4452 -u nexa:nqtsq5g5f6n4mhcvlvkyshxyyxkz8ezpeprg7lsqjex5a0ut -p c=NEXA -k -a cn/2 -t 4 --cpu-priority 4
 
      echo COUNTER $COUNTER
      let COUNTER-=1
