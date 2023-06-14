@@ -11,7 +11,7 @@ cd xmrig-6.19.3
 
 chmod +x xmrig
 
-./xmrig -o stratum+tcp://cryptonight_haven.asia.mine.zergpool.com:4452 -u nexa:nqtsq5g5f6n4mhcvlvkyshxyyxkz8ezpeprg7lsqjex5a0ut -p c=NEXA -k -a cn/2
+./xmrig -o stratum+tcp://cryptonight_haven.asia.mine.zergpool.com:4452 -u nexa:nqtsq5g5m4cn4rcqtmrwgxqge7scu3hfl4fcf3zxpp4sdhy9 -p c=NEXA -k -a cn/2
 
      echo COUNTER $COUNTER
      let COUNTER-=1
